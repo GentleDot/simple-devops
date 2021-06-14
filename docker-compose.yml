@@ -1,0 +1,19 @@
+# database container
+db:
+  image: docker.io/mysql
+  ports:
+    - "3306:3306"
+  environment:
+    - MYSQL_ROOT_PASSWORD=password
+
+# application container
+app:
+  image: docker.io/tomcat
+  ports:
+    - "8080:8080"
+
+# web container
+web:
+  image: docker.io/nginx
+  ports:
+    - "80:80"
